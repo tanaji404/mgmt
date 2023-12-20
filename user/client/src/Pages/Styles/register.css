@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.otp-popup{
+
+background-color: yellow;
+}
+
+.register_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://rpi.sectrage.io/rpis/assets/img/dark.png");
+  /* background-image: url("https://wallpaperaccess.com/full/1149125.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.register_left {
+  border-radius: 15px;
+  background: rgba(209, 209, 209, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 15px;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 545px;
+  background-color: white;
+}
+
+.form_here {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.forgotContainer{
+  height: auto !important;
+}
+
+.form__group2 {
+  position: relative;
+  padding: 15px 0 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  /* margin-bottom: 16px; */
+}
+
+.form__field1 {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+
+
+.form__field1:placeholder-shown ~ .form__label1 {
+  font-size: 15px;
+  cursor: text;
+  top: 7px;
+}
+
+.form__label1 {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #1b1b1b;
+  pointer-events: none;
+}
+
+.form__field1:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  /* border-image: linear-gradient(to right, #116399, #38caef); */
+  border-image-slice: 1;
+}
+
+.form__field1:focus ~ .form__label1 {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  /* color: #38caef; */
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field1:required,
+.form__field1:invalid {
+  box-shadow: none;
+}
+
+.sub-button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* background-color: #2a93e8; */
+  /* transition: all 0.2s ease; */
+  margin-top: 5%;
+  margin-inline: auto;
+  background: linear-gradient(180deg, #971EF6 10%, #541FAB 90%);
+}
+
+
+
+.alreadyAcc {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.login_Address {
+  text-decoration: underline;
+  color: black;
+  font-weight: 700;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.P_already {
+  font-size: 12px;
+}

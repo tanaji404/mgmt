@@ -1,0 +1,76 @@
+const express = require("express");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const mysql = require("mysql");
+
+const db = mysql.createConnection({
+  host: "your-mysql-host",
+  user: "your-mysql-user",
+  password: "your-mysql-password",
+  database: "your-mysql-database",
+});
+
+db.connect((err) => {
+  if (err) {
+    console.log("MySQL connection error:", err);
+  } else {
+    console.log("MySQL connected");
+  }
+});
+
+const router = express.Router();
+
+router.post("/register", async (req, res) => {
+  const { name, email, password, confirmPassword } = req.body;
+
+  if (!name || !email || !password || !confirmPassword) {
+    return res.status(422).json({ error: "Please fill all the details" });
+  }
+
+  try {
+    const userExistQuery = "SELECT * FROM users WHERE email = ?";
+    db.query(userExistQuery, [email], async (err, results) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+
+      if (results.length > 0) {
+        return res.status(422).json({ error: "Email is already in use" });
+      } else if (password !== confirmPassword) {
+        res.status(422).json({ err: "Message password didn't match" });
+      } else {
+        const hashedPassword = await bcrypt.hash(password, 12);
+
+        const insertUserQuery = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
+        db.query(insertUserQuery, [name, email, hashedPassword], (err, result) => {
+          if (err) {
+            console.log(err);
+            return res.status(500).json({ error: "Internal Server Error" });
+          }
+
+          return res.status(201).json({ message: "User Registered Successfully" });
+        });
+      }
+    });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+router.post("/login", async (req, res) => {
+  // ... (existing login route logic)
+});
+
+router.get("/tasks", async (req, res) => {
+  // ... (existing tasks route logic)
+});
+
+// ... (other routes)
+
+router.post("/login/admin", async (req, res) => {
+  // ... (existing admin login route logic)
+});
+
+module.exports = router;
