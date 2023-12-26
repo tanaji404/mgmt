@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import "./Styles/Task.css";
+import "./Styles/task.css";
 import { ToastContainer, toast } from "react-toastify";
 import "../App.css"
 

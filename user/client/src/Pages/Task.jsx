@@ -4,9 +4,8 @@ import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Styles/Task.css";
+import "./Styles/task.css";
 import Loader from "./Loader";
-import comlogo from "../img/comlogo.png";
 import headerimg from "../assets/rptn1.png";
 import { Icon } from "@iconify/react";
 

@@ -13,7 +13,7 @@
     "mysql2": "^3.6.5",
     "nodemailer": "^6.9.7"
   },
-  "name": "server",
+  "name": "index",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

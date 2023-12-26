@@ -112,30 +112,6 @@
 
 
 
-/* .popups{
-  width: 28%;
-  border-radius: 32px;
-  background: linear-gradient(138deg, #9400FF 0%, rgba(126, 28, 197, 0.00) 100%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #FFF;
-  font-family: Urbanist;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.popups form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-}
-
-.popups .second-popup {
-  display: flex;
-  align-items: center;
-} */
-
 .popups label {
 
   flex: 1;
@@ -155,46 +131,6 @@
   margin-top: 6%;
 }
 
-
-/* 
-.status-container {
-}
-
-.running-dots-container {
-
-  transform: translate(-50%, -50%);
-  display: flex;
-  float: right;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin: 0 3px;
-  animation: running-dot-animation 1s infinite alternate; 
-}
-
-.dot1 {
-  background-color: red; 
-}
-
-.dot2 {
-  background-color: green;
-}
-
-.dot3 {
-  background-color: blue; 
-}
-
-@keyframes running-dot-animation {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
-} */
 
 
 .running-dots-container {
@@ -240,14 +176,6 @@
     transform: translateY(5px);
   }
 }
-
-
-
-
-
-
-
-
 
 
 
