@@ -17,7 +17,6 @@ import Nav from "./Pages/Nav";
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(false);
-  
 
   useEffect(() => {
     const storedUserId = sessionStorage.getItem("userid");
@@ -28,12 +27,6 @@ const App = () => {
   }, []);
   return (
     <BrowserRouter>
-      {/* {isLogin && (
-        <>
-          <Nav />
-        </>
-      )} */}
-
       <Routes>
         <Route path="*" element={<div>Rerror 404 Page Not Found</div>} />
         <Route path="/login" element={<Protected Component={Login} />} />
