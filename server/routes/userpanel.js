@@ -63,7 +63,7 @@ router.use(
 );
 
 router.get("/", (req, res) => {
-  res.send("user page open");
+  res.send("user page open and its working");
 });
 
 const transporter = nodemailer.createTransport({
