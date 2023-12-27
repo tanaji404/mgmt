@@ -27,6 +27,8 @@ app.use("/admin",adminpanel)
 var userpanel=require("./routes/userpanel");
 app.use("/",userpanel)
 
+console.log('THis is index page and its working')
+
 
 
 app.listen(port, () => {
